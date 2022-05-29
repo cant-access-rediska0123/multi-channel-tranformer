@@ -127,3 +127,17 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# macOS
+.DS_store
+
+# Pycharm
+.idea/
+
+# Checkpoints & logs
+pretrained_models/
+logs/
+checkpoints/
+
+# Sentencepiece model
+experiments/configs/dictionaries/sp_eng.model

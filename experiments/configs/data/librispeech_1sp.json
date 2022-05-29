@@ -1,0 +1,68 @@
+{
+  "train": {
+    "speaker_num_freqs": [
+      1.0
+    ],
+    "tables": [
+      "weight=10:LibriSpeech/train-clean-100",
+      "weight=36:LibriSpeech/train-clean-360",
+      "weight=50:LibriSpeech/train-other-500"
+    ],
+    "flatten_texts": false,
+    "wave_augmentations": [
+      [
+        {
+          "name": "speed_wave_augmentation",
+          "max_duration": 16,
+          "min_speed_rate": 0.75,
+          "max_speed_rate": 1.25
+        },
+        1.0
+      ],
+      [
+        {
+          "name": "gain_wave_augmentation",
+          "max_duration": 16
+        },
+        0.25
+      ]
+    ],
+    "spec_augmentations": [
+      [
+        {
+          "name": "spec_augmentation",
+          "num_frame_regions": 2,
+          "num_feature_regions": 1,
+          "frame_width": 100,
+          "feature_width": 27,
+          "zero_prob": 0.5
+        },
+        1.0
+      ]
+    ]
+  },
+  "validation": [
+    {
+      "librispeech_path": "LibriSpeech/test-clean",
+      "speakers_num": 1,
+      "name": "test-clean"
+    },
+    {
+      "librispeech_path": "LibriSpeech/test-other",
+      "speakers_num": 1,
+      "name": "test-other"
+    }
+  ],
+  "test": [
+    {
+      "librispeech_path": "LibriSpeech/test-clean",
+      "speakers_num": 1,
+      "name": "test-clean"
+    },
+    {
+      "librispeech_path": "LibriSpeech/test-other",
+      "speakers_num": 1,
+      "name": "test-other"
+    }
+  ]
+}

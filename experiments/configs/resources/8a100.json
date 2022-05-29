@@ -1,0 +1,6 @@
+{
+  "num_workers": 24,
+  "num_gpus": 8,
+  "block_size": 16,
+  "batch_size": 8
+}

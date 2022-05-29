@@ -1,0 +1,12 @@
+{
+  "window_size_ms": 9000,
+  "window_shift_ms": 300,
+  "min_word_score": 5,
+  "noise_duration_ms": 20,
+  "timings_unstability_coefficient": 2000,
+  "combine_words_pause_duration_threshold_ms": 10000,
+  "long_pause_fix_duration_ms": 3000,
+  "optimize_graph_min_sz": 40,
+  "optimize_graph_min_window_ms": 24000,
+  "speakers_num": 2
+}

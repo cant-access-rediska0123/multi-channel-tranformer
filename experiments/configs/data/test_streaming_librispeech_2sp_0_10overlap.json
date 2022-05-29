@@ -1,0 +1,12 @@
+[
+  {
+    "name": "synthetic-2sp-streaming-test-clean_0_10overlap",
+    "table_path": "test-clean",
+    "synthetic_config_path": "LibriSpeech/synthetic_2sp_streaming_table_config_test-clean_0_10overlap.json"
+  },
+  {
+    "name": "synthetic-2sp-streaming-test-other_0_10overlap",
+    "table_path": "test-other",
+    "synthetic_config_path": "LibriSpeech/synthetic_2sp_streaming_table_config_test-other_0_10overlap.json"
+  }
+]

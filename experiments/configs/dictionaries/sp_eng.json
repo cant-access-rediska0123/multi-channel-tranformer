@@ -1,0 +1,4 @@
+{
+  "name": "sentencepiece_dictionary",
+  "dict_path": "experiments/configs/dictionaries/sp_eng.model"
+}

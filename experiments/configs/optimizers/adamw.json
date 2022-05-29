@@ -1,0 +1,18 @@
+{
+  "optimizer": {
+    "name": "adamw",
+    "lr": 0.0001,
+    "weight_decay": 0.01
+  },
+  "lr_scheduler": {
+    "scheduler": {
+      "name": "reduce_lr_on_plateu",
+      "factor": 0.1,
+      "min_lr": 0.000001
+    },
+    "interval": "step",
+    "frequency": 5000,
+    "monitor": "loss",
+    "strict": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "features_config_path": "experiments/configs/features/80mel.json",
+  "model_config_path": "experiments/configs/models/diarization_transformer_parallel.json",
+  "dictionary_config_path": "experiments/configs/dictionaries/sp_eng.json",
+  "text_processor_config_path": "experiments/configs/text_processors/multispeaker_eng.json",
+  "data_config_path": "experiments/configs/data/librispeech_2sp_parallel.json",
+  "resources_config_path": "experiments/configs/resources/8a100.json",
+  "optimizer_config_path": "experiments/configs/optimizers/adamw.json",
+  "trainer_config": {
+    "max_steps": 500000,
+    "precision": 16,
+    "accelerator": "dp",
+    "num_nodes": 1,
+    "val_check_interval": 100,
+    "num_sanity_val_steps": 1,
+    "gradient_clip_val": 1.0
+  },
+  "model_checkpoint_config": {
+    "dirpath": "checkpoints",
+    "every_n_epochs": 100,
+    "monitor": "test-clean-1sp_loss/dataloader_idx_0",
+    "save_top_k": 5,
+    "mode": "min"
+  },
+  "logs_dir": "logs"
+}

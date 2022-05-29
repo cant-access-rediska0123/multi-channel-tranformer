@@ -1,0 +1,12 @@
+[
+  {
+    "name": "synthetic-1sp-streaming-test-clean",
+    "table_path": "test-clean",
+    "synthetic_config_path": "LibriSpeech/synthetic_1sp_streaming_table_config_test-clean.json"
+  },
+  {
+    "name": "synthetic-1sp-streaming-test-other",
+    "table_path": "test-other",
+    "synthetic_config_path": "LibriSpeech/synthetic_1sp_streaming_table_config_test-other.json"
+  }
+]

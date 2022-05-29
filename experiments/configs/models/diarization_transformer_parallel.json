@@ -1,0 +1,67 @@
+{
+  "encoder": [
+    {
+      "name": "conv",
+      "stride": 2,
+      "kernel": 3,
+      "in_channels": 80,
+      "out_channels": 512
+    },
+    {
+      "name": "conv",
+      "stride": 2,
+      "kernel": 3,
+      "in_channels": 512,
+      "out_channels": 512
+    },
+    {
+      "name": "positional_encoding",
+      "embedding_dim": 512,
+      "concat": true,
+      "features_first": true
+    },
+    {
+      "name": "transformer_encoder",
+      "model_definition": {
+        "num_layers": 12,
+        "d_model": 1024,
+        "num_heads": 8,
+        "dim_feedforward": 2048,
+        "dropout": 0.15,
+        "activation": "gelu",
+        "normalize_before": true,
+        "final_norm": true
+      }
+    }
+  ],
+  "decoder": [
+    {
+      "name": "embedding",
+      "embedding_dim": 1024
+    },
+    {
+      "name": "positional_encoding",
+      "embedding_dim": 1024,
+      "concat": false,
+      "features_first": false,
+      "max_len": 5000
+    },
+    {
+      "name": "transformer_decoder",
+      "model_definition": {
+        "num_layers": 6,
+        "d_model": 1024,
+        "num_heads": 8,
+        "dim_feedforward": 2048,
+        "dropout": 0.15,
+        "activation": "gelu",
+        "normalize_before": true,
+        "final_norm": false
+      }
+    }
+  ],
+  "speakers_num": 2,
+  "text_decoder": {
+    "name": "sentencepiece_text_decoder"
+  }
+}
